@@ -1,0 +1,17 @@
+# Simple Stock Tracker
+
+# Define your stock holdings manually
+portfolio = {
+    "AAPL": {"shares": 10, "price": 180},   # Apple
+    "MSFT": {"shares": 5, "price": 320},    # Microsoft
+    "TSLA": {"shares": 2, "price": 700},    # Tesla
+}
+
+# Calculate total investment
+total_investment = 0
+for stock, data in portfolio.items():
+    investment = data["shares"] * data["price"]
+    print(f"{stock}: {data['shares']} shares × ${data['price']} = ${investment}")
+    total_investment += investment
+
+print("\nTotal Investment:", total_investment)
